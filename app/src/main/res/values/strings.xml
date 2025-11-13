@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">XDU SRUN Login</string>
+    <string name="menu">Menu</string>
+    <string name="auto_login_on_launch">Auto login on launch</string>
+    <string name="saved_credentials">Saved credentials</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="domain">Domain</string>
+    <string name="check_status">Check Status</string>
+    <string name="login">Login</string>
+    <string name="save_credential">Save Credential</string>
+    <string name="set_default">Set Default</string>
+    <string name="remove">Remove</string>
+    <string name="logs">Logs</string>
+    <string name="clear">Clear</string>
+
+    <string name="no_default_credential_set">No default credential set</string>
+    <string name="auto_login_requested">Auto-login requested</string>
+    <string name="already_logged_in">Already logged in</string>
+    <string name="auto_login_successful">Auto-login successful</string>
+    <string name="auto_login_failed">Auto-login failed</string>
+    <string name="auto_login_error_with_message">Auto-login error: %1$s</string>
+    <string name="logged_in_with_value">Logged in: %1$s</string>
+    <string name="error_with_message">Error: %1$s</string>
+    <string name="login_successful">Login successful</string>
+    <string name="login_failed">Login failed</string>
+    <string name="credential_saved">Credential saved</string>
+    <string name="default_credential_set">Default credential set</string>
+    <string name="credential_removed">Credential removed</string>
 </resources>

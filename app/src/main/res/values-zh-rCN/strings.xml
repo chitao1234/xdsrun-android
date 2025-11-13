@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">西电深澜登录</string>
+    <string name="menu">菜单</string>
+    <string name="auto_login_on_launch">启动时自动登录</string>
+    <string name="saved_credentials">已保存的凭据</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="hide_password">隐藏密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="domain">域名</string>
+    <string name="check_status">检查状态</string>
+    <string name="login">登录</string>
+    <string name="save_credential">保存凭据</string>
+    <string name="set_default">设为默认</string>
+    <string name="remove">移除</string>
+    <string name="logs">日志</string>
+    <string name="clear">清除</string>
+
+    <string name="no_default_credential_set">未设置默认凭据</string>
+    <string name="auto_login_requested">已请求自动登录</string>
+    <string name="already_logged_in">已登录</string>
+    <string name="auto_login_successful">自动登录成功</string>
+    <string name="auto_login_failed">自动登录失败</string>
+    <string name="auto_login_error_with_message">自动登录错误：%1$s</string>
+    <string name="logged_in_with_value">登录状态：%1$s</string>
+    <string name="error_with_message">错误：%1$s</string>
+    <string name="login_successful">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="credential_saved">已保存凭据</string>
+    <string name="default_credential_set">已设为默认凭据</string>
+    <string name="credential_removed">已移除凭据</string>
+</resources>
+

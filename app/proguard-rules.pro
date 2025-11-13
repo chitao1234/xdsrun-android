@@ -19,3 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep gobind generated classes and native methods
+-keep class go.** { *; }
+-keep class io.chitao1234.xdusrunlogin.** { *; }
+-keepclasseswithmembernames class * { native <methods>; }

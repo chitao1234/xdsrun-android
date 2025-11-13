@@ -1,0 +1,3 @@
+[submodule "lib/xdsrun-login"]
+	path = lib/xdsrun-login
+	url = https://github.com/chitao1234/xdsrun-login.git
