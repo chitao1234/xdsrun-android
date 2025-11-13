@@ -1,4 +1,6 @@
 import java.nio.file.Paths
+import com.android.build.api.variant.FilterConfiguration
+
 
 plugins {
     alias(libs.plugins.android.application)
@@ -19,6 +21,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
+        setProperty("archivesBaseName", "$applicationId-v$versionCode($versionName)")
+
         ndk {
             abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
         }
@@ -33,23 +37,6 @@ android {
         }
     }
 
-    applicationVariants.all {
-        outputs.all {
-            val apkOutput = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
-
-            val pkg = applicationId
-            val bt = buildType.name
-            val abiFilter = apkOutput.filters.find {
-                it.filterType == com.android.build.VariantOutput.FilterType.ABI.name
-            }?.identifier
-            val archPart = abiFilter ?: "universal"
-
-            val safePkg = pkg.replace('.', '_')
-
-            // `this` is ApkVariantOutputImpl underneath
-            apkOutput.outputFileName = "${safePkg}-${archPart}-${bt}.apk"
-        }
-    }
 
     buildTypes {
         release {
