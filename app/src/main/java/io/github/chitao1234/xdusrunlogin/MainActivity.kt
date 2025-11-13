@@ -66,7 +66,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
     var selectedId by remember { mutableStateOf<String?>(null) }
     var autoLogin by remember { mutableStateOf(false) }
 
-	DisposableEffect(Unit) {
+    DisposableEffect(Unit) {
 		Core.setLogger(object : Logger {
 			override fun log(p0: String) {
 				val line = p0

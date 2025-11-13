@@ -18,6 +18,37 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+        }
+    }
+
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+            isUniversalApk = true
+        }
+    }
+
+    applicationVariants.all {
+        outputs.all {
+            val apkOutput = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+
+            val pkg = applicationId
+            val bt = buildType.name
+            val abiFilter = apkOutput.filters.find {
+                it.filterType == com.android.build.VariantOutput.FilterType.ABI.name
+            }?.identifier
+            val archPart = abiFilter ?: "universal"
+
+            val safePkg = pkg.replace('.', '_')
+
+            // `this` is ApkVariantOutputImpl underneath
+            apkOutput.outputFileName = "${safePkg}-${archPart}-${bt}.apk"
+        }
     }
 
     buildTypes {
